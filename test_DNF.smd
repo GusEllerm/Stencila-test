@@ -1,0 +1,17 @@
+---
+title: Testing AI Features
+---
+
+this is {{x}}
+
+NO its 99
+
+::: if x > 50
+
+test
+
+::: else 
+
+no test
+
+:::

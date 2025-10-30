@@ -1,0 +1,99 @@
+{
+  "$schema": "https://stencila.org/v2.6.0/Article.schema.json",
+  "@context": "https://stencila.org/v2.6.0/context.jsonld",
+  "type": "Article",
+  "content": [
+    {
+      "type": "Heading",
+      "level": 1,
+      "content": [
+        {
+          "type": "Text",
+          "value": {
+            "string": "Testing AI Features"
+          }
+        }
+      ]
+    },
+    {
+      "type": "CodeChunk",
+      "code": {
+        "string": "x = True"
+      },
+      "programmingLanguage": "python"
+    },
+    {
+      "type": "IfBlock",
+      "clauses": [
+        {
+          "type": "IfBlockClause",
+          "code": {
+            "string": "x"
+          },
+          "content": [
+            {
+              "type": "InstructionBlock",
+              "instructionType": "Describe",
+              "prompt": {
+                "type": "PromptBlock",
+                "instructionType": "Describe",
+                "query": "Wax lyrical about X being true."
+              },
+              "message": {
+                "type": "InstructionMessage",
+                "parts": [
+                  {
+                    "type": "Text",
+                    "value": {
+                      "string": "Wax lyrical about X being true."
+                    }
+                  }
+                ]
+              },
+              "modelParameters": {
+                "type": "ModelParameters",
+                "modelIds": [
+                  "openai/gpt-5"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "IfBlockClause",
+          "code": {
+            "string": ""
+          },
+          "content": [
+            {
+              "type": "InstructionBlock",
+              "instructionType": "Describe",
+              "prompt": {
+                "type": "PromptBlock",
+                "instructionType": "Describe",
+                "query": "Wax lyrical about X being false."
+              },
+              "message": {
+                "type": "InstructionMessage",
+                "parts": [
+                  {
+                    "type": "Text",
+                    "value": {
+                      "string": "Wax lyrical about X being false."
+                    }
+                  }
+                ]
+              },
+              "modelParameters": {
+                "type": "ModelParameters",
+                "modelIds": [
+                  "openai/gpt-5"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
